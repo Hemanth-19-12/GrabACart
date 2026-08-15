@@ -1,0 +1,38 @@
+# ==========================
+# Dependencies
+# ==========================
+node_modules/
+
+# ==========================
+# Environment & Secrets
+# ==========================
+.env
+
+# ==========================
+# OS & Editor Files
+# ==========================
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~
+
+# ==========================
+# IDE / Editor Directories
+# ==========================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ==========================
+# Logs
+# ==========================
+*.log
+npm-debug.log*
+
+# ==========================
+# Runtime Data
+# ==========================
+src/data/database.json

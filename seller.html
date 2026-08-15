@@ -1,0 +1,1594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grab A Cart Seller Hub · Merchant Portal, Pricing &amp; Onboarding 🇮🇳</title>
+  <!-- Google Fonts & FontAwesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    :root {
+      --primary: #ff5722;
+      --primary-hover: #e64a19;
+      --primary-light: #fff3e0;
+      --accent: #138808;
+      --accent-light: #e8f5e9;
+      --saffron: #ff9933;
+      --dark: #0f172a;
+      --dark-card: #1e293b;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --bg: #f8fafc;
+      --white: #ffffff;
+      --danger: #ef4444;
+      --warning: #f59e0b;
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-full: 9999px;
+      --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.04);
+      --shadow-md: 0 10px 25px -5px rgba(15, 23, 42, 0.08);
+      --shadow-lg: 0 20px 40px -10px rgba(15, 23, 42, 0.15);
+      --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      width: 100%;
+    }
+
+    /* HEADER */
+    .seller-header {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 0.9rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: var(--shadow-sm);
+    }
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .seller-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 800;
+      font-size: 1.35rem;
+    }
+    .seller-badge-tag {
+      background: #1e1b4b;
+      color: #fed7aa;
+      font-size: 0.72rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: var(--radius-full);
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .btn-customer-store {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #f1f5f9;
+      border: 1px solid var(--border);
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-full);
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 700;
+      font-size: 0.85rem;
+      transition: var(--transition);
+    }
+    .btn-customer-store:hover {
+      background: #e2e8f0;
+    }
+
+    /* AUTH / LOGIN SECTION */
+    .seller-login-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      padding: 3rem 1.5rem;
+    }
+    .seller-login-card {
+      background: var(--white);
+      max-width: 540px;
+      width: 100%;
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--border);
+    }
+    .login-icon-wrap {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, #ff5722, #ff9933);
+      color: white;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      margin-bottom: 1.2rem;
+      box-shadow: 0 4px 15px rgba(255, 87, 34, 0.3);
+    }
+    .seller-login-title {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 0.3rem;
+    }
+    .seller-login-subtitle {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    /* Strict Admin Notice Box */
+    .admin-provision-notice {
+      background: #eff6ff;
+      border: 1.5px solid #93c5fd;
+      border-radius: var(--radius-md);
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      font-size: 0.83rem;
+      color: #1e3a8a;
+      line-height: 1.45;
+    }
+    .admin-provision-notice strong {
+      color: #1d4ed8;
+      display: block;
+      margin-bottom: 3px;
+      font-size: 0.88rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.1rem;
+    }
+    .form-label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 0.35rem;
+    }
+    .form-input, .form-select, .form-textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-md);
+      font-size: 0.95rem;
+      background: #fafafa;
+      color: var(--dark);
+      outline: none;
+      transition: var(--transition);
+    }
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      border-color: var(--primary);
+      background: var(--white);
+      box-shadow: 0 0 0 4px rgba(255, 87, 34, 0.1);
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .checkbox-terms-label {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.83rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      margin: 1rem 0;
+      line-height: 1.4;
+    }
+    .checkbox-terms-label input {
+      margin-top: 3px;
+      accent-color: var(--primary);
+      width: 17px;
+      height: 17px;
+      flex-shrink: 0;
+    }
+    .checkbox-terms-label a {
+      color: var(--primary);
+      font-weight: 700;
+      text-decoration: underline;
+    }
+
+    .btn-submit {
+      width: 100%;
+      background: var(--primary);
+      color: var(--white);
+      border: none;
+      padding: 0.85rem;
+      border-radius: var(--radius-full);
+      font-weight: 800;
+      font-size: 1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 0.8rem;
+      transition: var(--transition);
+    }
+    .btn-submit:hover { background: var(--primary-hover); }
+
+    .modal-alert {
+      padding: 0.75rem 1rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      display: none;
+    }
+    .modal-alert.error {
+      display: block;
+      background: #fee2e2;
+      color: #991b1b;
+      border: 1px solid #fecaca;
+    }
+    .modal-alert.success {
+      display: block;
+      background: #dcfce7;
+      color: #166534;
+      border: 1px solid #bbf7d0;
+    }
+
+    /* SELLER DASHBOARD VIEW */
+    .seller-dashboard {
+      display: none;
+      padding: 2rem 0 4rem;
+    }
+    .seller-dashboard.active {
+      display: block;
+    }
+
+    .dashboard-topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(135deg, #1e1b4b, #1e293b, #ff5722);
+      color: white;
+      padding: 2rem 2.2rem;
+      border-radius: var(--radius-lg);
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow-md);
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .merchant-info h2 {
+      font-size: 1.6rem;
+      font-weight: 800;
+      margin-bottom: 0.3rem;
+    }
+    .merchant-info p {
+      color: #fed7aa;
+      font-size: 0.9rem;
+    }
+    .merchant-actions {
+      display: flex;
+      gap: 10px;
+    }
+    .btn-add-product {
+      background: #138808;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.4rem;
+      border-radius: var(--radius-full);
+      font-weight: 800;
+      font-size: 0.92rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 12px rgba(19, 136, 8, 0.35);
+      transition: var(--transition);
+    }
+    .btn-add-product:hover {
+      background: #0e6b06;
+      transform: translateY(-2px);
+    }
+    .btn-seller-logout {
+      background: rgba(255,255,255,0.15);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.3);
+      padding: 0.75rem 1.2rem;
+      border-radius: var(--radius-full);
+      font-weight: 700;
+      font-size: 0.9rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: var(--transition);
+    }
+    .btn-seller-logout:hover {
+      background: rgba(255,255,255,0.25);
+    }
+
+    /* Stats Grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    .stat-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 1.4rem;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+    }
+    .stat-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+    }
+    .stat-icon.orange { background: #fff3e0; color: #ff5722; }
+    .stat-icon.green { background: #e8f5e9; color: #138808; }
+    .stat-icon.blue { background: #e0f2fe; color: #0284c7; }
+    .stat-icon.purple { background: #ede9fe; color: #7c3aed; }
+    .stat-val { font-size: 1.5rem; font-weight: 800; color: var(--dark); line-height: 1.1; }
+    .stat-label { font-size: 0.8rem; color: var(--text-muted); font-weight: 600; }
+
+    /* Inventory Table */
+    .inventory-section {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 1.8rem;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+    .inventory-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.2rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .inventory-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--dark);
+    }
+    .inventory-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+    }
+    .inventory-table th {
+      background: #f8fafc;
+      text-align: left;
+      padding: 0.85rem 1rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      border-bottom: 1.5px solid var(--border);
+    }
+    .inventory-table td {
+      padding: 1rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: middle;
+    }
+    .inventory-table tr:hover {
+      background: #fafbfc;
+    }
+    .table-prod-img {
+      width: 50px;
+      height: 50px;
+      border-radius: var(--radius-sm);
+      object-fit: cover;
+      background: #f1f5f9;
+    }
+    .badge-pill {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 0.2rem 0.6rem;
+      border-radius: var(--radius-full);
+      background: #f1f5f9;
+      color: var(--dark);
+    }
+    .badge-pill.hot { background: #fee2e2; color: #991b1b; }
+    .badge-pill.seller { background: #e8f5e9; color: #166534; }
+    .stock-badge {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #15803d;
+    }
+    .stock-badge.low { color: #b45309; }
+
+    .btn-action-edit {
+      background: #e0f2fe;
+      border: 1px solid #bae6fd;
+      color: #0284c7;
+      padding: 0.35rem 0.75rem;
+      border-radius: var(--radius-full);
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      margin-right: 6px;
+      transition: var(--transition);
+    }
+    .btn-action-edit:hover {
+      background: #bae6fd;
+    }
+
+    .btn-action-del {
+      background: none;
+      border: 1px solid #fecaca;
+      color: var(--danger);
+      padding: 0.35rem 0.7rem;
+      border-radius: var(--radius-full);
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .btn-action-del:hover {
+      background: #fee2e2;
+    }
+
+    /* MODALS */
+    .modal-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.55);
+      backdrop-filter: blur(6px);
+      z-index: 1100;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+    .modal-backdrop.active {
+      display: flex;
+      opacity: 1;
+    }
+    .modal-card {
+      background: var(--white);
+      width: 100%;
+      max-width: 680px;
+      border-radius: var(--radius-lg);
+      padding: 2.2rem;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+    .modal-close-x {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.2rem;
+      background: #f1f5f9;
+      border: none;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      color: var(--text-muted);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+    }
+
+    /* TOAST NOTIFICATIONS */
+    .toast-container {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      pointer-events: none;
+    }
+    .toast {
+      background: var(--dark);
+      color: var(--white);
+      padding: 0.85rem 1.4rem;
+      border-radius: var(--radius-full);
+      box-shadow: var(--shadow-lg);
+      font-size: 0.88rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      pointer-events: auto;
+      animation: toastIn 0.3s ease;
+    }
+    @keyframes toastIn {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="seller-header">
+    <div class="container header-inner">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <a href="index.html" class="seller-brand">
+          <div class="logo-icon" style="width: 36px; height: 36px; background: linear-gradient(135deg, #ff5722, #ff9933); color: white; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem;"><i class="fas fa-shopping-cart"></i></div>
+          <span>Grab A Cart</span>
+        </a>
+        <span class="seller-badge-tag"><i class="fas fa-store"></i> Seller Hub</span>
+      </div>
+
+      <div>
+        <a href="index.html" class="btn-customer-store">
+          <i class="fas fa-arrow-left"></i> Back to Customer Store
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== VIEW 1: SELLER LOGIN (NO PUBLIC REGISTRATION & NO AUTOFILL) ==================== -->
+  <main class="seller-login-container" id="sellerLoginSection">
+    <div class="seller-login-card">
+      <div class="login-icon-wrap"><i class="fas fa-store-alt"></i></div>
+      <h1 class="seller-login-title">Merchant Portal Login</h1>
+      <p class="seller-login-subtitle">Secure merchant access to manage inventory, pricing &amp; listings</p>
+
+      <!-- STRICT ADMIN PROVISIONING NOTICE -->
+      <div class="admin-provision-notice">
+        <strong><i class="fas fa-shield-alt"></i> Admin-Managed Merchant Accounts</strong>
+        Seller accounts are provisioned internally by Grab A Cart administrators. Public registration is disabled to guarantee quality and consumer trust across India.
+      </div>
+
+      <div class="modal-alert error" id="sellerLoginAlert"></div>
+
+      <form id="sellerLoginForm" autocomplete="off">
+        <div class="form-group">
+          <label class="form-label">Merchant Email Address</label>
+          <input type="email" class="form-input" id="sellerEmail" placeholder="Enter authorized merchant email" required autocomplete="off">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Merchant Password</label>
+          <input type="password" class="form-input" id="sellerPassword" placeholder="Enter merchant password" required autocomplete="off">
+        </div>
+
+        <!-- MANDATORY POLICY & TERMS CHECKBOX -->
+        <label class="checkbox-terms-label">
+          <input type="checkbox" id="sellerTermsCheck" required>
+          <span>I agree to Grab A Cart's <a href="#" id="viewSellerTermsLink">Merchant Agreement</a>, <a href="#" id="viewSellerPolicyLink">Marketplace Terms of Service</a>, and <a href="#" id="viewSellerPrivacyLink">Privacy Policy</a>.</span>
+        </label>
+
+        <button type="submit" class="btn-submit" id="sellerSubmitBtn">
+          <i class="fas fa-sign-in-alt"></i> Sign In to Merchant Dashboard
+        </button>
+      </form>
+
+      <!-- ONBOARDING / APPLY AS SELLER & CONTACT SUPPORT BOX -->
+      <div style="margin-top: 1.8rem; background: #fff8f5; border: 1.5px dashed #ffccbc; border-radius: var(--radius-md); padding: 1.3rem; text-align: left;">
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.5rem;">
+          <div style="width: 34px; height: 34px; background: #ff5722; color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1rem;"><i class="fas fa-handshake"></i></div>
+          <div>
+            <h4 style="font-size: 0.96rem; font-weight: 800; color: var(--dark);">Want to sell on Grab A Cart India?</h4>
+            <p style="font-size: 0.78rem; color: var(--text-muted);">Apply for merchant verification &amp; onboarding</p>
+          </div>
+        </div>
+        <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.45; margin-bottom: 0.8rem;">
+          Join thousands of verified Indian brands &amp; sellers. Contact our Partner Support or submit an onboarding request to get your merchant account provisioned:
+        </p>
+        <div style="font-size: 0.8rem; color: var(--dark); margin-bottom: 1rem; display: flex; flex-direction: column; gap: 4px;">
+          <div><i class="fas fa-envelope" style="color: var(--primary); width: 18px;"></i> Email: <strong>partners@grabacart.com</strong></div>
+          <div><i class="fas fa-phone-alt" style="color: var(--accent); width: 18px;"></i> Merchant Helpline: <strong>+91 80 4123 9900</strong> (Mon–Sat 9AM–7PM)</div>
+          <div><i class="fas fa-check-circle" style="color: #0284c7; width: 18px;"></i> Required: <strong>GSTIN, Business PAN &amp; Bank Details</strong></div>
+        </div>
+        <button type="button" class="btn-submit" id="openSellerApplyModalBtn" style="background: #1e1b4b; padding: 0.65rem; font-size: 0.88rem; margin-top: 0;">
+          <i class="fas fa-file-signature"></i> Apply as Verified Merchant Partner
+        </button>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ==================== VIEW 2: SELLER DASHBOARD ==================== -->
+  <main class="container seller-dashboard" id="sellerDashboardSection">
+    
+    <!-- Top Merchant Info Bar -->
+    <div class="dashboard-topbar">
+      <div class="merchant-info">
+        <span class="seller-badge-tag" style="background: rgba(255,255,255,0.2); color: white; margin-bottom: 6px; display: inline-block;"><i class="fas fa-check-circle"></i> Verified Merchant Partner</span>
+        <h2 id="merchantStoreName">Grab A Cart Official Flagship Store</h2>
+        <p><i class="fas fa-envelope"></i> <span id="merchantEmailText">seller@grabacart.com</span> · GSTIN: <strong>29ABCDE1234F1Z5</strong> · Bengaluru Fulfillment Hub</p>
+      </div>
+      <div class="merchant-actions">
+        <button class="btn-add-product" id="openAddProductModalBtn">
+          <i class="fas fa-plus-circle"></i> List New Product
+        </button>
+        <button class="btn-seller-logout" id="sellerLogoutBtn">
+          <i class="fas fa-sign-out-alt"></i> Log Out
+        </button>
+      </div>
+    </div>
+
+    <!-- Inventory Stats -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon orange"><i class="fas fa-boxes"></i></div>
+        <div>
+          <div class="stat-val" id="statTotalCount">12</div>
+          <div class="stat-label">Total Listed Products</div>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon green"><i class="fas fa-layer-group"></i></div>
+        <div>
+          <div class="stat-val" id="statCategoriesCount">5</div>
+          <div class="stat-label">Active Categories</div>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon blue"><i class="fas fa-warehouse"></i></div>
+        <div>
+          <div class="stat-val" id="statTotalStock">280</div>
+          <div class="stat-label">Total Inventory Units</div>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon purple"><i class="fas fa-rupee-sign"></i></div>
+        <div>
+          <div class="stat-val">₹ INR</div>
+          <div class="stat-label">Active Currency</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Inventory Table Section -->
+    <section class="inventory-section">
+      <div class="inventory-header">
+        <div>
+          <h3 class="inventory-title">Active Store Catalog &amp; Pricing Management</h3>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Manage product prices in ₹ INR, original MRP, and stock availability instantly across India.</p>
+        </div>
+        <button class="btn-add-product" id="openAddProductModalBtn2" style="font-size: 0.85rem; padding: 0.55rem 1.1rem;">
+          <i class="fas fa-plus"></i> Add Product
+        </button>
+      </div>
+
+      <div style="overflow-x: auto;">
+        <table class="inventory-table">
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th>Product Details</th>
+              <th>Category</th>
+              <th>Selling Price (₹)</th>
+              <th>MRP (₹)</th>
+              <th>Stock</th>
+              <th>Badge</th>
+              <th>Manage</th>
+            </tr>
+          </thead>
+          <tbody id="inventoryTableBody">
+            <!-- Dynamically rendered products -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== MODAL: APPLY FOR SELLER VERIFICATION ==================== -->
+  <div class="modal-backdrop" id="sellerApplyModal">
+    <div class="modal-card">
+      <button class="modal-close-x" id="closeSellerApplyModalBtn">&times;</button>
+      <div style="margin-bottom: 1.5rem;">
+        <h3 style="font-size: 1.4rem; font-weight: 800; color: var(--dark);"><i class="fas fa-store" style="color: var(--primary); margin-right: 8px;"></i>Merchant Verification &amp; Onboarding Application</h3>
+        <p style="color: var(--text-muted); font-size: 0.88rem;">Submit your business details for admin review and store provisioning</p>
+      </div>
+
+      <div class="modal-alert error" id="sellerApplyAlert"></div>
+      <div class="modal-alert success" id="sellerApplySuccess"></div>
+
+      <form id="sellerApplyForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Business / Registered Firm Name *</label>
+            <input type="text" class="form-input" id="applyBizName" placeholder="e.g. Apex Retail India Pvt Ltd" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Authorized Contact Person *</label>
+            <input type="text" class="form-input" id="applyContactName" placeholder="Full name" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Business Email Address *</label>
+            <input type="email" class="form-input" id="applyEmail" placeholder="contact@yourbusiness.in" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Mobile / Phone Number *</label>
+            <input type="tel" class="form-input" id="applyPhone" placeholder="+91 98765 43210" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">15-Digit GSTIN Number *</label>
+            <input type="text" class="form-input" id="applyGstin" placeholder="29ABCDE1234F1Z5" maxlength="15" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Product Category</label>
+            <select class="form-select" id="applyCategory" required>
+              <option value="Electronics">Consumer Electronics &amp; Audio</option>
+              <option value="Gadgets">Smart Wearables &amp; Accessories</option>
+              <option value="Fashion">Apparel, Footwear &amp; Bags</option>
+              <option value="Home & Living">Home, Kitchen &amp; Décor</option>
+              <option value="Groceries">Organic, Tea, Coffee &amp; Ayurveda</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Warehouse &amp; Dispatch City *</label>
+          <input type="text" class="form-input" id="applyCity" placeholder="e.g. Bengaluru, Karnataka" required>
+        </div>
+
+        <button type="submit" class="btn-submit" style="background: var(--accent);">
+          <i class="fas fa-paper-plane"></i> Submit Application for Admin Review
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL: ADD NEW PRODUCT ==================== -->
+  <div class="modal-backdrop" id="addProductModal">
+    <div class="modal-card">
+      <button class="modal-close-x" id="closeAddProductModalBtn">&times;</button>
+      <div style="margin-bottom: 1.5rem;">
+        <h3 style="font-size: 1.4rem; font-weight: 800; color: var(--dark);"><i class="fas fa-plus-circle" style="color: var(--primary); margin-right: 8px;"></i>List New Product (₹ INR)</h3>
+        <p style="color: var(--text-muted); font-size: 0.88rem;">Add your product to the Grab A Cart nationwide Indian catalog</p>
+      </div>
+
+      <div class="modal-alert error" id="addProductAlert"></div>
+
+      <form id="addProductForm">
+        <div class="form-group">
+          <label class="form-label">Product Name / Title *</label>
+          <input type="text" class="form-input" id="newProdName" placeholder="e.g. Boult Audio AirBass X10 Wireless TWS" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Category *</label>
+            <select class="form-select" id="newProdCategory" required>
+              <option value="Electronics" selected>Electronics</option>
+              <option value="Gadgets">Gadgets</option>
+              <option value="Fashion">Fashion</option>
+              <option value="Home & Living">Home &amp; Living</option>
+              <option value="Groceries">Groceries / Ayurveda</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Promo Badge</label>
+            <input type="text" class="form-input" id="newProdBadge" placeholder="e.g. New Arrival, Best Deal, Hot">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Selling Price (₹ INR) *</label>
+            <input type="number" class="form-input" id="newProdPrice" placeholder="e.g. 1499" min="1" step="1" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Original MRP (₹ INR)</label>
+            <input type="number" class="form-input" id="newProdOriginalPrice" placeholder="e.g. 2999" min="1" step="1">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Available Stock Quantity *</label>
+          <input type="number" class="form-input" id="newProdStock" placeholder="e.g. 50" min="1" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">High-Resolution Image URL</label>
+          <input type="url" class="form-input" id="newProdImage" placeholder="https://images.unsplash.com/photo-...">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Product Description</label>
+          <textarea class="form-textarea" id="newProdDesc" placeholder="Highlight key features, material, battery life, warranty, etc."></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit" style="background: var(--accent);">
+          <i class="fas fa-check-circle"></i> Publish Product to Store
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL: MANAGE PRICING & STOCK ==================== -->
+  <div class="modal-backdrop" id="editPriceModal">
+    <div class="modal-card">
+      <button class="modal-close-x" id="closeEditPriceModalBtn">&times;</button>
+      <div style="margin-bottom: 1.5rem;">
+        <h3 style="font-size: 1.4rem; font-weight: 800; color: var(--dark);"><i class="fas fa-tags" style="color: var(--primary); margin-right: 8px;"></i>Manage Product Pricing &amp; Stock</h3>
+        <p style="color: var(--text-muted); font-size: 0.88rem;" id="editModalSubtitle">Update selling price and inventory count for this listing</p>
+      </div>
+
+      <div class="modal-alert error" id="editPriceAlert"></div>
+
+      <form id="editPriceForm">
+        <input type="hidden" id="editProdId">
+
+        <div class="form-group">
+          <label class="form-label">Product Name / Title</label>
+          <input type="text" class="form-input" id="editProdName" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Selling Price (₹ INR) *</label>
+            <input type="number" class="form-input" id="editProdPrice" min="1" step="1" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Original MRP (₹ INR)</label>
+            <input type="number" class="form-input" id="editProdOriginalPrice" min="1" step="1">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Available Stock Quantity *</label>
+            <input type="number" class="form-input" id="editProdStock" min="0" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Promo Badge</label>
+            <input type="text" class="form-input" id="editProdBadge" placeholder="e.g. Best Seller, Sale">
+          </div>
+        </div>
+
+        <button type="submit" class="btn-submit" style="background: var(--primary);">
+          <i class="fas fa-save"></i> Save Updated Pricing &amp; Stock
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL: POLICY & TERMS ==================== -->
+  <div class="modal-backdrop" id="policyModal">
+    <div class="modal-card">
+      <button class="modal-close-x" id="closePolicyModalBtn">&times;</button>
+      <div style="margin-bottom: 1.2rem;">
+        <h3 style="font-size: 1.4rem; font-weight: 800; color: var(--dark);"><i class="fas fa-gavel" style="color: var(--primary); margin-right: 8px;"></i>Grab A Cart Terms &amp; Policies</h3>
+        <p style="color: var(--text-muted); font-size: 0.88rem;">E-Commerce Guidelines &amp; Consumer Protection Compliance</p>
+      </div>
+
+      <div style="max-height: 55vh; overflow-y: auto; font-size: 0.85rem; color: var(--dark); line-height: 1.6; border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 1.2rem; background: #fafbfc;">
+        <h4 style="font-weight: 800; color: var(--primary); margin-bottom: 0.4rem;">1. Merchant Agreement &amp; Code of Conduct</h4>
+        <p style="margin-bottom: 1rem;">All sellers on Grab A Cart India must be registered business entities with a valid GSTIN and PAN. Merchants guarantee that all listed goods are 100% genuine, new, and compliant with BIS and Indian regulatory standards.</p>
+
+        <h4 style="font-weight: 800; color: var(--primary); margin-bottom: 0.4rem;">2. Fair Pricing &amp; Price Transparency</h4>
+        <p style="margin-bottom: 1rem;">All product prices are quoted in Indian Rupees (₹ INR) inclusive of all applicable taxes. Maximum Retail Price (MRP) must match manufacturer declarations. Artificial price inflation is strictly prohibited.</p>
+
+        <h4 style="font-weight: 800; color: var(--primary); margin-bottom: 0.4rem;">3. Order Fulfillment &amp; 7-Day Returns</h4>
+        <p style="margin-bottom: 1rem;">Orders must be packed and dispatched through approved logistics partners within 24 hours of placement. Consumers are entitled to a hassle-free 7-day doorstep replacement or refund for damaged or defective products.</p>
+
+        <h4 style="font-weight: 800; color: var(--primary); margin-bottom: 0.4rem;">4. Privacy &amp; Data Protection</h4>
+        <p>Customer data (names, phone numbers, addresses) is strictly confidential and protected by 256-bit encryption. It may only be used for direct order fulfillment and courier delivery.</p>
+      </div>
+
+      <button type="button" class="btn-submit" id="agreePolicyModalBtn" style="background: var(--dark); margin-top: 1.2rem;">
+        <i class="fas fa-check"></i> I Understand &amp; Agree
+      </button>
+    </div>
+  </div>
+
+  <!-- TOAST CONTAINER -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- ==================== SCRIPT LOGIC ==================== -->
+  <script>
+    (function() {
+      'use strict';
+
+      // Default products seed
+      const DEFAULT_PRODUCTS = [
+        {
+          id: 1,
+          name: "AuraWave ANC Wireless Headphones",
+          category: "Electronics",
+          price: 2499,
+          originalPrice: 4999,
+          rating: 4.8,
+          reviewsCount: 342,
+          stock: 24,
+          badge: "Best Seller",
+          image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&auto=format&fit=crop&q=80",
+          desc: "Active noise cancelling with 40h battery life, plush memory foam ear cushions, and ultra-crisp Hi-Res audio tuned for Indian music lovers.",
+          sellerName: "Grab A Cart Official Flagship Store",
+          sellerRating: 4.9,
+          sellerLocation: "Bengaluru, Karnataka"
+        },
+        {
+          id: 2,
+          name: "PulseFit Pro Smartwatch S9",
+          category: "Gadgets",
+          price: 3299,
+          originalPrice: 5999,
+          rating: 4.7,
+          reviewsCount: 218,
+          stock: 15,
+          badge: "New Release",
+          image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80",
+          desc: "Continuous heart-rate, SpO2 sensor, built-in GPS, 1.9-inch AMOLED display with 10-day battery backup and Hindi language UI support.",
+          sellerName: "Grab A Cart Official Flagship Store",
+          sellerRating: 4.9,
+          sellerLocation: "Bengaluru, Karnataka"
+        },
+        {
+          id: 3,
+          name: "Vortex Mech RGB Mechanical Keyboard",
+          category: "Electronics",
+          price: 2199,
+          originalPrice: 3499,
+          rating: 4.9,
+          reviewsCount: 512,
+          stock: 8,
+          badge: "Hot Deal",
+          image: "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=600&auto=format&fit=crop&q=80",
+          desc: "Customizable per-key RGB backlighting, tactile hot-swappable switches, aircraft-grade aluminum top frame.",
+          sellerName: "Grab A Cart Official Flagship Store",
+          sellerRating: 4.9,
+          sellerLocation: "Bengaluru, Karnataka"
+        },
+        {
+          id: 4,
+          name: "UltraGlide Ergonomic Gaming Mouse",
+          category: "Electronics",
+          price: 1199,
+          originalPrice: 1999,
+          rating: 4.6,
+          reviewsCount: 189,
+          stock: 30,
+          badge: "Popular",
+          image: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=600&auto=format&fit=crop&q=80",
+          desc: "26,000 DPI optical sensor, lightweight honeycomb shell (58g), and ultra-flexible paracord cable.",
+          sellerName: "Grab A Cart Official Flagship Store",
+          sellerRating: 4.9,
+          sellerLocation: "Bengaluru, Karnataka"
+        },
+        {
+          id: 5,
+          name: "UrbanFlex Minimalist Laptop Backpack",
+          category: "Fashion",
+          price: 1499,
+          originalPrice: 2499,
+          rating: 4.8,
+          reviewsCount: 275,
+          stock: 19,
+          badge: "Trending",
+          image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&auto=format&fit=crop&q=80",
+          desc: "Water-resistant ballistic nylon, dedicated 16-inch padded laptop compartment, and hidden anti-theft pocket.",
+          sellerName: "Grab A Cart Official Flagship Store",
+          sellerRating: 4.9,
+          sellerLocation: "Bengaluru, Karnataka"
+        },
+        {
+          id: 6,
+          name: "Classic Chronograph Leather Watch",
+          category: "Fashion",
+          price: 3999,
+          originalPrice: 6999,
+          rating: 4.9,
+          reviewsCount: 140,
+          stock: 12,
+          badge: "Premium",
+          image: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=600&auto=format&fit=crop&q=80",
+          desc: "Genuine handcrafted brown leather band, Japanese quartz chronograph movement, scratch-resistant sapphire crystal glass.",
+          sellerName: "Grab A Cart Official Flagship Store",
+          sellerRating: 4.9,
+          sellerLocation: "Bengaluru, Karnataka"
+        },
+        {
+          id: 7,
+          name: "PureBrew Artisan Pour-Over Kettle",
+          category: "Home & Living",
+          price: 1299,
+          originalPrice: 1999,
+          rating: 4.7,
+          reviewsCount: 96,
+          stock: 18,
+          badge: "Choice",
+          image: "https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6?w=600&auto=format&fit=crop&q=80",
+          desc: "Precision gooseneck spout for optimal tea and coffee brewing, built-in thermometer gauge, matte black stainless steel.",
+          sellerName: "Grab A Cart Official Flagship Store",
+          sellerRating: 4.9,
+          sellerLocation: "Bengaluru, Karnataka"
+        },
+        {
+          id: 8,
+          name: "Nordic Ceramic Table Lamp",
+          category: "Home & Living",
+          price: 1699,
+          originalPrice: 2499,
+          rating: 4.6,
+          reviewsCount: 112,
+          stock: 14,
+          badge: "Style",
+          image: "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=600&auto=format&fit=crop&q=80",
+          desc: "Handcrafted textured ceramic base, natural flax linen shade, 3-way touch dimming with warm LED bulb included.",
+          sellerName: "Grab A Cart Official Flagship Store",
+          sellerRating: 4.9,
+          sellerLocation: "Bengaluru, Karnataka"
+        },
+        {
+          id: 9,
+          name: "Organic Chikmagalur Coffee Beans (1kg)",
+          category: "Groceries",
+          price: 799,
+          originalPrice: 1199,
+          rating: 4.9,
+          reviewsCount: 620,
+          stock: 45,
+          badge: "Organic",
+          image: "https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=600&auto=format&fit=crop&q=80",
+          desc: "100% Arabica single-origin medium roast from the lush hills of Chikmagalur, Karnataka. Rich notes of dark chocolate.",
+          sellerName: "Grab A Cart Official Flagship Store",
+          sellerRating: 4.9,
+          sellerLocation: "Bengaluru, Karnataka"
+        },
+        {
+          id: 10,
+          name: "Eco-Fresh Ayurvedic Superfood Blend (500g)",
+          category: "Groceries",
+          price: 599,
+          originalPrice: 899,
+          rating: 4.7,
+          reviewsCount: 180,
+          stock: 32,
+          badge: "Healthy",
+          image: "https://images.unsplash.com/photo-1550989460-0adf9ea622e2?w=600&auto=format&fit=crop&q=80",
+          desc: "Traditional Ayurvedic botanical blend with Ashwagandha, Moringa, Amla, Spirulina, and Wheatgrass for daily vitality.",
+          sellerName: "Grab A Cart Official Flagship Store",
+          sellerRating: 4.9,
+          sellerLocation: "Bengaluru, Karnataka"
+        },
+        {
+          id: 11,
+          name: "HyperCharge 100W GaN Fast Charger",
+          category: "Gadgets",
+          price: 1299,
+          originalPrice: 1999,
+          rating: 4.9,
+          reviewsCount: 410,
+          stock: 28,
+          badge: "Must Have",
+          image: "https://images.unsplash.com/photo-1622445262464-84b1456045b6?w=600&auto=format&fit=crop&q=80",
+          desc: "4-in-1 GaN III fast charger (3x USB-C, 1x USB-A) with BIS Indian certification and surge protection for all laptops and phones.",
+          sellerName: "Grab A Cart Official Flagship Store",
+          sellerRating: 4.9,
+          sellerLocation: "Bengaluru, Karnataka"
+        },
+        {
+          id: 12,
+          name: "HydroPure Insulated Steel Flask (1000ml)",
+          category: "Home & Living",
+          price: 799,
+          originalPrice: 1199,
+          rating: 4.8,
+          reviewsCount: 388,
+          stock: 40,
+          badge: "Eco",
+          image: "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=600&auto=format&fit=crop&q=80",
+          desc: "Double-wall vacuum insulation keeps liquids ice cold for 24 hours or hot chai piping hot for 12 hours.",
+          sellerName: "Grab A Cart Official Flagship Store",
+          sellerRating: 4.9,
+          sellerLocation: "Bengaluru, Karnataka"
+        }
+      ];
+
+      function getProducts() {
+        const stored = localStorage.getItem('gac_products_db');
+        if (!stored) {
+          localStorage.setItem('gac_products_db', JSON.stringify(DEFAULT_PRODUCTS));
+          return DEFAULT_PRODUCTS;
+        }
+        return JSON.parse(stored);
+      }
+
+      function saveProducts(list) {
+        localStorage.setItem('gac_products_db', JSON.stringify(list));
+      }
+
+      function formatINR(amt) {
+        return '₹' + Math.round(amt).toLocaleString('en-IN');
+      }
+
+      function showToast(msg, icon = 'fa-check-circle') {
+        const container = document.getElementById('toastContainer');
+        const toast = document.createElement('div');
+        toast.className = 'toast';
+        toast.innerHTML = `<i class="fas ${icon}" style="color: #4ade80;"></i> <span>${msg}</span>`;
+        container.appendChild(toast);
+        setTimeout(() => {
+          toast.style.opacity = '0';
+          toast.style.transform = 'translateY(10px)';
+          toast.style.transition = '0.3s ease';
+          setTimeout(() => toast.remove(), 300);
+        }, 3000);
+      }
+
+      // Initial DB check
+      function getUsersDB() {
+        const stored = localStorage.getItem('gac_users_db');
+        if (!stored) {
+          const INITIAL_USERS = [
+            {
+              id: 'usr_seller789',
+              name: 'Grab A Cart Verified Merchant',
+              email: 'seller@grabacart.com',
+              password: 'seller123',
+              role: 'seller',
+              storeName: 'Grab A Cart Official Flagship Store'
+            }
+          ];
+          localStorage.setItem('gac_users_db', JSON.stringify(INITIAL_USERS));
+          return INITIAL_USERS;
+        }
+        const db = JSON.parse(stored);
+        if (!db.find(u => u.email === 'seller@grabacart.com')) {
+          db.push({
+            id: 'usr_seller789',
+            name: 'Grab A Cart Verified Merchant',
+            email: 'seller@grabacart.com',
+            password: 'seller123',
+            role: 'seller',
+            storeName: 'Grab A Cart Official Flagship Store'
+          });
+          localStorage.setItem('gac_users_db', JSON.stringify(db));
+        }
+        return db;
+      }
+
+      let currentSeller = JSON.parse(localStorage.getItem('gac_current_seller') || 'null');
+
+      const dom = {
+        sellerLoginSection: document.getElementById('sellerLoginSection'),
+        sellerDashboardSection: document.getElementById('sellerDashboardSection'),
+        sellerLoginForm: document.getElementById('sellerLoginForm'),
+        sellerEmail: document.getElementById('sellerEmail'),
+        sellerPassword: document.getElementById('sellerPassword'),
+        sellerTermsCheck: document.getElementById('sellerTermsCheck'),
+        sellerLoginAlert: document.getElementById('sellerLoginAlert'),
+        merchantStoreName: document.getElementById('merchantStoreName'),
+        merchantEmailText: document.getElementById('merchantEmailText'),
+        sellerLogoutBtn: document.getElementById('sellerLogoutBtn'),
+        openAddProductModalBtn: document.getElementById('openAddProductModalBtn'),
+        openAddProductModalBtn2: document.getElementById('openAddProductModalBtn2'),
+        addProductModal: document.getElementById('addProductModal'),
+        closeAddProductModalBtn: document.getElementById('closeAddProductModalBtn'),
+        addProductForm: document.getElementById('addProductForm'),
+        addProductAlert: document.getElementById('addProductAlert'),
+        editPriceModal: document.getElementById('editPriceModal'),
+        closeEditPriceModalBtn: document.getElementById('closeEditPriceModalBtn'),
+        editPriceForm: document.getElementById('editPriceForm'),
+        editPriceAlert: document.getElementById('editPriceAlert'),
+        sellerApplyModal: document.getElementById('sellerApplyModal'),
+        closeSellerApplyModalBtn: document.getElementById('closeSellerApplyModalBtn'),
+        openSellerApplyModalBtn: document.getElementById('openSellerApplyModalBtn'),
+        sellerApplyForm: document.getElementById('sellerApplyForm'),
+        sellerApplyAlert: document.getElementById('sellerApplyAlert'),
+        sellerApplySuccess: document.getElementById('sellerApplySuccess'),
+        policyModal: document.getElementById('policyModal'),
+        closePolicyModalBtn: document.getElementById('closePolicyModalBtn'),
+        agreePolicyModalBtn: document.getElementById('agreePolicyModalBtn'),
+        viewSellerTermsLink: document.getElementById('viewSellerTermsLink'),
+        viewSellerPolicyLink: document.getElementById('viewSellerPolicyLink'),
+        viewSellerPrivacyLink: document.getElementById('viewSellerPrivacyLink'),
+        inventoryTableBody: document.getElementById('inventoryTableBody'),
+        statTotalCount: document.getElementById('statTotalCount'),
+        statCategoriesCount: document.getElementById('statCategoriesCount'),
+        statTotalStock: document.getElementById('statTotalStock')
+      };
+
+      function updateSellerView() {
+        if (currentSeller) {
+          dom.sellerLoginSection.style.display = 'none';
+          dom.sellerDashboardSection.classList.add('active');
+          dom.merchantStoreName.textContent = currentSeller.storeName || currentSeller.name;
+          dom.merchantEmailText.textContent = currentSeller.email;
+          renderInventoryTable();
+        } else {
+          dom.sellerLoginSection.style.display = 'flex';
+          dom.sellerDashboardSection.classList.remove('active');
+        }
+      }
+
+      function handleSellerLogin(e) {
+        e.preventDefault();
+        const email = dom.sellerEmail.value.trim().toLowerCase();
+        const password = dom.sellerPassword.value.trim();
+
+        dom.sellerLoginAlert.style.display = 'none';
+
+        // REQUIREMENT: Checkbox must be true to proceed with login
+        if (!dom.sellerTermsCheck.checked) {
+          dom.sellerLoginAlert.textContent = 'Please read and agree to the Merchant Agreement and Terms & Conditions to sign in.';
+          dom.sellerLoginAlert.style.display = 'block';
+          return;
+        }
+
+        if (!email || !password) {
+          dom.sellerLoginAlert.textContent = 'Please enter merchant email and password.';
+          dom.sellerLoginAlert.style.display = 'block';
+          return;
+        }
+
+        const db = getUsersDB();
+        const user = db.find(u => u.email.toLowerCase() === email);
+
+        // STRICT SELLER AUTH: User must exist AND have role 'seller' or 'admin'
+        if (!user || (user.role !== 'seller' && user.role !== 'admin') || user.password !== password) {
+          dom.sellerLoginAlert.innerHTML = `<i class="fas fa-ban"></i> <strong>Access Denied:</strong> Invalid seller credentials or account not provisioned by administrator. Public seller registration is disabled. Click "Apply as Verified Merchant Partner" below to apply.`;
+          dom.sellerLoginAlert.style.display = 'block';
+          return;
+        }
+
+        currentSeller = user;
+        localStorage.setItem('gac_current_seller', JSON.stringify(user));
+        showToast(`Welcome to Merchant Hub, ${user.name}!`, 'fa-store');
+        updateSellerView();
+      }
+
+      function handleSellerLogout() {
+        currentSeller = null;
+        localStorage.removeItem('gac_current_seller');
+        showToast('Logged out of Seller Hub');
+        updateSellerView();
+      }
+
+      function renderInventoryTable() {
+        const prods = getProducts();
+        dom.statTotalCount.textContent = prods.length;
+        
+        const categories = [...new Set(prods.map(p => p.category))];
+        dom.statCategoriesCount.textContent = categories.length;
+
+        const totalStock = prods.reduce((sum, p) => sum + (p.stock || 20), 0);
+        dom.statTotalStock.textContent = totalStock;
+
+        if (prods.length === 0) {
+          dom.inventoryTableBody.innerHTML = `
+            <tr>
+              <td colspan="8" style="text-align: center; padding: 2rem; color: var(--text-muted);">
+                No products in catalog. Click "+ List New Product" to add your first item!
+              </td>
+            </tr>
+          `;
+          return;
+        }
+
+        dom.inventoryTableBody.innerHTML = prods.map(p => `
+          <tr>
+            <td>
+              <img src="${p.image}" alt="${p.name}" class="table-prod-img" onerror="this.src='https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=200';">
+            </td>
+            <td>
+              <strong style="color: var(--dark); font-size: 0.95rem;">${p.name}</strong>
+              <div style="font-size: 0.78rem; color: var(--text-muted); line-height: 1.3; margin-top: 2px;">
+                ${p.desc ? p.desc.substring(0, 65) + '...' : 'Verified merchant listing'}
+              </div>
+            </td>
+            <td>
+              <span class="badge-pill">${p.category}</span>
+            </td>
+            <td>
+              <strong style="color: var(--primary); font-size: 1rem;">${formatINR(p.price)}</strong>
+            </td>
+            <td>
+              <span style="color: var(--text-muted); text-decoration: line-through; font-size: 0.85rem;">
+                ${p.originalPrice ? formatINR(p.originalPrice) : '-'}
+              </span>
+            </td>
+            <td>
+              <span class="stock-badge ${(p.stock || 20) < 10 ? 'low' : ''}">
+                <i class="fas fa-cubes"></i> ${p.stock || 20} units
+              </span>
+            </td>
+            <td>
+              ${p.badge ? `<span class="badge-pill ${p.badge.toLowerCase().includes('hot') ? 'hot' : 'seller'}">${p.badge}</span>` : '-'}
+            </td>
+            <td>
+              <button class="btn-action-edit" onclick="window.sellerApp.openEditModal(${p.id})">
+                <i class="fas fa-edit"></i> Edit Price &amp; Stock
+              </button>
+              <button class="btn-action-del" onclick="window.sellerApp.deleteProduct(${p.id})">
+                <i class="fas fa-trash-alt"></i> Remove
+              </button>
+            </td>
+          </tr>
+        `).join('');
+      }
+
+      function handleAddProduct(e) {
+        e.preventDefault();
+        const name = document.getElementById('newProdName').value.trim();
+        const category = document.getElementById('newProdCategory').value;
+        const price = parseFloat(document.getElementById('newProdPrice').value);
+        const originalPrice = document.getElementById('newProdOriginalPrice').value ? parseFloat(document.getElementById('newProdOriginalPrice').value) : null;
+        const stock = parseInt(document.getElementById('newProdStock').value) || 25;
+        const badge = document.getElementById('newProdBadge').value.trim() || 'New Arrival';
+        const image = document.getElementById('newProdImage').value.trim() || 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80';
+        const desc = document.getElementById('newProdDesc').value.trim() || 'Premium quality product listed by verified Grab A Cart merchant.';
+
+        dom.addProductAlert.style.display = 'none';
+
+        if (!name || isNaN(price) || price <= 0) {
+          dom.addProductAlert.textContent = 'Please enter a valid product name and selling price.';
+          dom.addProductAlert.style.display = 'block';
+          return;
+        }
+
+        const prods = getProducts();
+        const newId = prods.length > 0 ? Math.max(...prods.map(p => p.id)) + 1 : 1;
+
+        const newProduct = {
+          id: newId,
+          name,
+          category,
+          price,
+          originalPrice,
+          stock,
+          badge,
+          image,
+          desc,
+          rating: 5.0,
+          reviewsCount: 1,
+          sellerId: currentSeller.id,
+          sellerName: currentSeller.storeName || currentSeller.name || "Grab A Cart Official Flagship Store",
+          sellerRating: 4.9,
+          sellerLocation: "Bengaluru, Karnataka",
+          createdAt: new Date().toISOString()
+        };
+
+        prods.unshift(newProduct);
+        saveProducts(prods);
+
+        showToast(`Listed "${name}" for ${formatINR(price)}!`, 'fa-check-circle');
+        closeAddModal();
+        renderInventoryTable();
+
+        // Reset form
+        document.getElementById('newProdName').value = '';
+        document.getElementById('newProdPrice').value = '';
+        document.getElementById('newProdOriginalPrice').value = '';
+        document.getElementById('newProdStock').value = '';
+        document.getElementById('newProdBadge').value = '';
+        document.getElementById('newProdImage').value = '';
+        document.getElementById('newProdDesc').value = '';
+      }
+
+      function openEditPriceModal(id) {
+        const prods = getProducts();
+        const prod = prods.find(p => p.id === id);
+        if (!prod) return;
+
+        document.getElementById('editProdId').value = prod.id;
+        document.getElementById('editProdName').value = prod.name;
+        document.getElementById('editProdPrice').value = prod.price;
+        document.getElementById('editProdOriginalPrice').value = prod.originalPrice || '';
+        document.getElementById('editProdStock').value = prod.stock || 20;
+        document.getElementById('editProdBadge').value = prod.badge || '';
+        dom.editPriceAlert.style.display = 'none';
+
+        dom.editPriceModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeEditPriceModal() {
+        dom.editPriceModal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+
+      function handleSaveEditPrice(e) {
+        e.preventDefault();
+        const id = parseInt(document.getElementById('editProdId').value);
+        const name = document.getElementById('editProdName').value.trim();
+        const price = parseFloat(document.getElementById('editProdPrice').value);
+        const originalPrice = document.getElementById('editProdOriginalPrice').value ? parseFloat(document.getElementById('editProdOriginalPrice').value) : null;
+        const stock = parseInt(document.getElementById('editProdStock').value) || 0;
+        const badge = document.getElementById('editProdBadge').value.trim();
+
+        if (!name || isNaN(price) || price <= 0) {
+          dom.editPriceAlert.textContent = 'Please enter a valid product name and price (₹).';
+          dom.editPriceAlert.style.display = 'block';
+          return;
+        }
+
+        const prods = getProducts();
+        const index = prods.findIndex(p => p.id === id);
+        if (index === -1) return;
+
+        prods[index].name = name;
+        prods[index].price = price;
+        prods[index].originalPrice = originalPrice;
+        prods[index].stock = stock;
+        prods[index].badge = badge;
+        saveProducts(prods);
+
+        showToast(`Updated "${name}" to ${formatINR(price)} (Stock: ${stock})!`, 'fa-check-circle');
+        closeEditPriceModal();
+        renderInventoryTable();
+      }
+
+      function handleSellerApplication(e) {
+        e.preventDefault();
+        const bizName = document.getElementById('applyBizName').value.trim();
+        const contact = document.getElementById('applyContactName').value.trim();
+        const email = document.getElementById('applyEmail').value.trim();
+        const phone = document.getElementById('applyPhone').value.trim();
+        const gstin = document.getElementById('applyGstin').value.trim();
+        const city = document.getElementById('applyCity').value.trim();
+
+        dom.sellerApplyAlert.style.display = 'none';
+
+        if (!bizName || !contact || !email || !phone || !gstin || !city) {
+          dom.sellerApplyAlert.textContent = 'Please fill out all required application fields.';
+          dom.sellerApplyAlert.style.display = 'block';
+          return;
+        }
+
+        if (gstin.length < 15) {
+          dom.sellerApplyAlert.textContent = 'Please enter a valid 15-character GSTIN number.';
+          dom.sellerApplyAlert.style.display = 'block';
+          return;
+        }
+
+        dom.sellerApplySuccess.innerHTML = `
+          <strong><i class="fas fa-check-circle"></i> Application Submitted!</strong><br>
+          Thank you for applying to sell on Grab A Cart India. Our Partner Verification team will review your GSTIN (${gstin}) and contact ${email} / ${phone} within 24 business hours to provision your merchant portal account.
+        `;
+        dom.sellerApplySuccess.style.display = 'block';
+        showToast('Seller Application Submitted!', 'fa-paper-plane');
+
+        setTimeout(() => {
+          closeSellerApplyModal();
+          dom.sellerApplySuccess.style.display = 'none';
+          document.getElementById('sellerApplyForm').reset();
+        }, 3500);
+      }
+
+      function deleteProduct(id) {
+        if (!confirm('Are you sure you want to remove this product from the Grab A Cart store?')) return;
+        let prods = getProducts();
+        prods = prods.filter(p => p.id !== id);
+        saveProducts(prods);
+        renderInventoryTable();
+        showToast('Product removed from catalog', 'fa-trash-alt');
+      }
+
+      function openAddModal() {
+        dom.addProductModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeAddModal() {
+        dom.addProductModal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+
+      function openSellerApplyModal() {
+        dom.sellerApplyModal.classList.add('active');
+        dom.sellerApplyAlert.style.display = 'none';
+        dom.sellerApplySuccess.style.display = 'none';
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeSellerApplyModal() {
+        dom.sellerApplyModal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+
+      function openPolicyModal(e) {
+        if (e) e.preventDefault();
+        dom.policyModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closePolicyModal() {
+        dom.policyModal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+
+      // Event Listeners
+      dom.sellerLoginForm.addEventListener('submit', handleSellerLogin);
+      dom.sellerLogoutBtn.addEventListener('click', handleSellerLogout);
+      dom.openAddProductModalBtn.addEventListener('click', openAddModal);
+      if (dom.openAddProductModalBtn2) dom.openAddProductModalBtn2.addEventListener('click', openAddModal);
+      dom.closeAddProductModalBtn.addEventListener('click', closeAddModal);
+      dom.addProductForm.addEventListener('submit', handleAddProduct);
+
+      dom.closeEditPriceModalBtn.addEventListener('click', closeEditPriceModal);
+      dom.editPriceForm.addEventListener('submit', handleSaveEditPrice);
+
+      dom.openSellerApplyModalBtn.addEventListener('click', openSellerApplyModal);
+      dom.closeSellerApplyModalBtn.addEventListener('click', closeSellerApplyModal);
+      dom.sellerApplyForm.addEventListener('submit', handleSellerApplication);
+
+      dom.viewSellerTermsLink.addEventListener('click', openPolicyModal);
+      dom.viewSellerPolicyLink.addEventListener('click', openPolicyModal);
+      dom.viewSellerPrivacyLink.addEventListener('click', openPolicyModal);
+      dom.closePolicyModalBtn.addEventListener('click', closePolicyModal);
+      dom.agreePolicyModalBtn.addEventListener('click', () => {
+        dom.sellerTermsCheck.checked = true;
+        closePolicyModal();
+        showToast('Accepted Merchant Agreement & Terms');
+      });
+
+      dom.addProductModal.addEventListener('click', (e) => {
+        if (e.target === dom.addProductModal) closeAddModal();
+      });
+      dom.editPriceModal.addEventListener('click', (e) => {
+        if (e.target === dom.editPriceModal) closeEditPriceModal();
+      });
+      dom.sellerApplyModal.addEventListener('click', (e) => {
+        if (e.target === dom.sellerApplyModal) closeSellerApplyModal();
+      });
+      dom.policyModal.addEventListener('click', (e) => {
+        if (e.target === dom.policyModal) closePolicyModal();
+      });
+
+      window.sellerApp = {
+        deleteProduct: (id) => deleteProduct(id),
+        openEditModal: (id) => openEditPriceModal(id)
+      };
+
+      getUsersDB();
+      getProducts();
+      updateSellerView();
+
+    })();
+  </script>
+</body>
+</html>
